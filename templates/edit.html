@@ -1,0 +1,9 @@
+  <tr>
+        <td>{{ form.username }}</td>
+        <td>{{ form.salary }}</td>
+        <td>{{ form.number }}</td>
+        
+        <td><button hx-post="{% url 'htmx:edit-event' event.id %}"  hx-swap="outerHTML" class="btn btn-outline-success btn-sm" hx-target="closest tr">save</button></td>
+        
+    </tr>
+  

@@ -1,0 +1,30 @@
+<html>
+<head>
+    
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+</head>
+<body>
+<form action="{% url 'htmx:adduser'%}" method="post">
+    {% csrf_token %}
+    
+<table>
+  <thead>
+    <tr>
+      <th><label>username</label></th>
+      <th><label>salary</label></th>
+      <th><label>number</label></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>{{ form.username }}</td>
+        <td>{{ form.salary }}</td>
+        <td>{{ form.number }}</td>
+    </tr>
+  </tbody>
+</table>
+    <button>add<a href="http://127.0.0.1:8000" ></a></button>
+    <br>
+</form>
+</body>
+</html>

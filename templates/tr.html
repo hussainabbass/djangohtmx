@@ -1,0 +1,8 @@
+  <tr>
+          <td><label id="zusername">{{ event.username }}</label></td>
+          <td><label id="zsalary">{{ event.salary }}</label></td>
+          <td><label id="znumber">{{ event.number }}</label></td>
+          <td><button hx-get="{% url 'htmx:delete-event' event.id %}" hx-target="closest tr" hx-swap="delete" class="btn btn-outline-danger btn-sm">Delete</button></td>
+{#          <td><a href="{% url 'htmx:edit-event' event.id %}"  hx-swap="outerHTML" class="btn btn-outline-info btn-sm">edit</a></td>#}
+          <td><button hx-get="{% url 'htmx:edit-event' event.id %}"  hx-swap="outerHTML" class="btn btn-outline-info btn-sm" hx-target="closest tr">edit</button></td>
+  </tr>

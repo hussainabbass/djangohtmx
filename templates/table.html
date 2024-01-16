@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th><label>username</label></th>
+      <th><label>salary</label></th>
+      <th><label>number</label></th>
+        <th><label>DELETE</label></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for event in tabledata %}
+    {% include 'tr.html' %}
+      {% endfor %}
+ 
+  
+  </tbody>
+
+</table>
