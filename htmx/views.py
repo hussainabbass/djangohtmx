@@ -20,10 +20,6 @@ def adduser(request):
         form = LoginForm(request.POST)
     context = {'form': form}
     if form.is_valid():
-        n = form.cleaned_data['username']
-        s = form.cleaned_data['salary']
-        num = form.cleaned_data['number']
-        print(num)
         form.save()
         return redirect('htmx:index')
     else:
